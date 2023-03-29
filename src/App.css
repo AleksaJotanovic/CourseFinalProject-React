@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+.icon-bar * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icon-bar {
+  position: fixed;
+  top: 70%;
+  right: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  z-index: 30;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icon-bar a {
+  text-decoration: none;
+  width: 210px;
+  background: white;
+  color: black;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  transform: translateX(+9em);
+  -webkit-transform: translateX(+9em);
+  -ms-transform: translateX(+9em);
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
 }
 
-.App-link {
-  color: #61dafb;
+.asterisk::after {
+  content: "*";
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-bg {
+  height: 91vh;
+  background-image: url("./resources/loginBackground.jpg");
+  background-position: center -91px;
+  background-repeat: no-repeat;
+  background-size: 900px 115vh;
+}
+.login-bg > p {
+  font-size: 13px;
+}
+.login-bg > p > a {
+  color: black;
 }
